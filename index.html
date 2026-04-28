@@ -4,145 +4,455 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil KAMZA - Kampung Zakat Terpadu Dusun Paceh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* === CSS STYLING === */
+        /* === MODERN CSS STYLING === */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        
+        :root {
+            --primary-dark: #001F6B;
+            --primary-green: #229C4A;
+            --accent-light: #E8F5E9;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #F8FBFA;
+            --white: #FFFFFF;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #F8FBFA 0%, #F0F7F4 100%);
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            min-height: 100vh;
         }
-        /* Navbar */
+
+        /* === NAVBAR === */
         nav {
-            background-color: #001F6B;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #003d99 100%);
             color: white;
-            padding: 1rem 5%;
+            padding: 1.2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
         }
+
         nav h1 {
-            font-size: 1.5rem;
-            color: #229C4A;
+            font-size: 1.4rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: white;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
+            letter-spacing: -0.5px;
         }
+
+        nav h1 span {
+            color: var(--primary-green);
+            font-weight: 800;
+        }
+
         nav .logo {
-            height: 50px;
+            height: 55px;
             width: auto;
             object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+            transition: var(--transition);
         }
+
+        nav .logo:hover {
+            transform: scale(1.08);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 35px;
         }
+
         nav ul li a {
-            color: white;
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             font-weight: 500;
-            transition: 0.3s;
+            font-size: 0.95rem;
+            position: relative;
+            transition: var(--transition);
+            letter-spacing: 0.3px;
         }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--primary-green);
+            transition: var(--transition);
+        }
+
         nav ul li a:hover {
-            color: #229C4A;
+            color: var(--primary-green);
         }
-        /* Hero Section */
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* === HERO SECTION === */
         .hero {
-            background: linear-gradient(rgba(0, 31, 107, 0.8), rgba(34, 156, 74, 0.8)), url('https://source.unsplash.com/1600x900/?village,community') center/cover;
+            background: linear-gradient(135deg, rgba(0, 31, 107, 0.85) 0%, rgba(34, 156, 74, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1600&h=900&fit=crop') center/cover;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 140px 20px;
+            position: relative;
+            overflow: hidden;
         }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(34, 156, 74, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
         .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2rem;
+            font-size: 3.5rem;
+            font-family: 'Poppins', sans-serif;
             margin-bottom: 20px;
-            max-width: 800px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            animation: slideDownFade 0.8s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 850px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 300;
+            line-height: 1.8;
+            animation: slideUpFade 0.8s ease-out 0.2s both;
+            position: relative;
+            z-index: 1;
         }
-        /* Container untuk Section */
+
+        @keyframes slideDownFade {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* === CONTAINER === */
         .container {
-            width: 85%;
-            margin: 40px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            width: 90%;
+            max-width: 1100px;
+            margin: 80px auto;
+            background: var(--white);
+            padding: 60px 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            animation: fadeInUp 0.8s ease-out;
         }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         h3 {
-            color: #001F6B;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #229C4A;
+            color: var(--primary-dark);
+            margin-bottom: 35px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            position: relative;
             display: inline-block;
-            padding-bottom: 5px;
-            font-size: 1.8rem;
         }
-        /* Grid Program */
+
+        h3::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green) 0%, rgba(34, 156, 74, 0.3) 100%);
+            border-radius: 2px;
+        }
+
+        .container p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        /* === PROGRAM GRID === */
         .program-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 45px;
         }
+
         .program-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 5px solid #229C4A;
+            background: linear-gradient(135deg, var(--accent-light) 0%, #F5F5F5 100%);
+            padding: 35px;
+            border-radius: 16px;
+            border-left: 5px solid var(--primary-green);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(34, 156, 74, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, #E8F5E9 0%, #FFFFFF 100%);
+        }
+
         .program-card h4 {
-            color: #229C4A;
-            margin-bottom: 10px;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
         }
-        /* Grid Logo Lembaga */
+
+        .program-card p {
+            color: var(--text-light);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* === LOGO GRID === */
         .logo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
             align-items: center;
             justify-items: center;
         }
+
         .logo-item {
             text-align: center;
+            transition: var(--transition);
+            padding: 20px;
+            border-radius: 12px;
+            background: var(--bg-light);
+            cursor: pointer;
         }
+
+        .logo-item:hover {
+            background: var(--accent-light);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
         .logo-item img {
-            max-width: 120px;
+            max-width: 130px;
             height: auto;
-            filter: grayscale(100%); /* Efek abu-abu elegan */
-            transition: 0.3s;
+            transition: var(--transition);
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
         }
-        .logo-item img:hover {
-            filter: grayscale(0%); /* Berwarna saat disentuh mouse */
-            transform: scale(1.1);
+
+        .logo-item:hover img {
+            transform: scale(1.15) rotate(2deg);
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
         }
+
         .logo-item p {
-            margin-top: 10px;
-            font-size: 0.9rem;
+            margin-top: 15px;
+            font-size: 0.85rem;
             font-weight: 600;
-            color: #555;
+            color: var(--text-dark);
+            letter-spacing: 0.3px;
         }
-        /* Footer */
+
+        /* === FOOTER === */
         footer {
-            background-color: #001F6B;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #003d99 100%);
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
+            padding: 50px 20px;
+            margin-top: 80px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        }
+
+        footer h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.85);
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 20px;
+                padding: 1rem 3%;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 35px 25px;
+                margin: 50px auto;
+            }
+
+            h3 {
+                font-size: 1.8rem;
+            }
+
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 25px;
+            }
+
+            .logo-item img {
+                max-width: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav h1 {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                padding: 80px 15px;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 25px 20px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* === SCROLLBAR STYLING === */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
         }
     </style>
 </head>
@@ -151,7 +461,7 @@
     <nav>
         <h1>
             <img src="logo-kampung-zakat.png" alt="Logo KAMZA" class="logo">
-            KAMZA
+            <span>KAMZA</span>
         </h1>
         <ul>
             <li><a href="#profil">Profil</a></li>
@@ -161,16 +471,16 @@
     </nav>
 
     <header class="hero">
-        <h2>Kampung Zakat Terpadu (KAMZA)</h2>
-        <p>Dusun Paceh, Desa Jambearum, Kec. Sumberjambe, Kab. Jember<br>Membangun Kemandirian Umat Melalui Zakat yang Tepat Sasaran dan Berkelanjutan.</p>
+        <h2>Kampung Zakat Terpadu</h2>
+        <p>Dusun Paceh, Desa Jambearum, Kec. Sumberjambe, Kab. Jember<br><strong>Membangun Kemandirian Umat Melalui Zakat yang Tepat Sasaran dan Berkelanjutan</strong></p>
     </header>
 
     <section class="container" id="profil">
         <h3>Tentang KAMZA</h3>
-        <p style="margin-bottom: 15px; font-size: 1.1rem; text-align: justify;">
-            <strong>Kampung Zakat Terpadu (KAMZA)</strong> adalah program binaan resmi dari Kantor Kementerian Agama (Kemenag) Kabupaten Jember yang didirikan pada tanggal 15 Maret 2018, dan diresmikan langsung oleh Kakanwil Kemenag Provinsi Jawa Timur pada 31 Maret 2018. 
+        <p style="margin-bottom: 20px; margin-top: 40px;">
+            <strong style="color: var(--primary-green); font-size: 1.1rem;">Kampung Zakat Terpadu (KAMZA)</strong> adalah program binaan resmi dari Kantor Kementerian Agama (Kemenag) Kabupaten Jember yang didirikan pada tanggal 15 Maret 2018, dan diresmikan langsung oleh Kakanwil Kemenag Provinsi Jawa Timur pada 31 Maret 2018. 
         </p>
-        <p style="margin-bottom: 15px; font-size: 1.1rem; text-align: justify;">
+        <p style="margin-bottom: 0;">
             Di bawah arahan dan pengelolaan Bapak Amiruddin, S.Pd. selaku Sekretaris Direktur/Direktur, KAMZA hadir sebagai solusi untuk meningkatkan kualitas ekonomi, pendidikan, dan kesehatan masyarakat di Dusun Paceh dan sekitarnya melalui pendayagunaan dana zakat, infaq, dan sedekah secara produktif dan kolaboratif.
         </p>
     </section>
@@ -195,7 +505,7 @@
 
     <section class="container" id="sinergi">
         <h3>Sinergi & Kolaborasi</h3>
-        <p style="text-align: center; margin-bottom: 20px;">Keberhasilan program KAMZA terwujud berkat dukungan luar biasa dari berbagai Unit Pengumpul Zakat (UPZ) dan Lembaga Amil Zakat (LAZ) berikut:</p>
+        <p style="text-align: center; margin-bottom: 30px; margin-top: 40px; color: var(--text-light);">Keberhasilan program KAMZA terwujud berkat dukungan luar biasa dari berbagai Unit Pengumpul Zakat (UPZ) dan Lembaga Amil Zakat (LAZ) berikut:</p>
         
         <div class="logo-grid">
             <div class="logo-item">
@@ -250,9 +560,9 @@
     </section>
 
     <footer>
-        <h3>KAMZA (Kampung Zakat Terpadu)</h3>
+        <h3>KAMZA - Kampung Zakat Terpadu</h3>
         <p>Dusun Paceh, Desa Jambearum, Kec. Sumberjambe, Kab. Jember, Jawa Timur</p>
-        <p style="margin-top: 15px; color: #bdc3c7;"><small>&copy; 2026 KAMZA Dusun Paceh. Binaan Kemenag Kab. Jember.</small></p>
+        <p style="margin-top: 20px; color: rgba(255,255,255,0.7);"><small>&copy; 2026 KAMZA Dusun Paceh. Binaan Kemenag Kab. Jember. Semua Hak Dilindungi.</small></p>
     </footer>
 
 </body>
