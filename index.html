@@ -1,611 +1,1163 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil KAMZA - Kampung Zakat Terpadu Dusun Paceh</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        /* === MODERN CSS STYLING === */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-dark: #001F6B;
-            --primary-green: #229C4A;
-            --accent-light: #E8F5E9;
-            --text-dark: #1a1a1a;
-            --text-light: #666;
-            --bg-light: #F8FBFA;
-            --white: #FFFFFF;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
-            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.15);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profil KAMZA - Kampung Zakat Terpadu Dusun Paceh, Desa Jambearum, Sumberjambe, Jember." />
+  <title>Profil KAMZA - Kampung Zakat Terpadu Dusun Paceh</title>
 
-        html {
-            scroll-behavior: smooth;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        body {
-            background: linear-gradient(135deg, #F8FBFA 0%, #F0F7F4 100%);
-            color: var(--text-dark);
-            line-height: 1.8;
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            min-height: 100vh;
-        }
+  <style>
+    :root {
+      --navy: #001f6b;
+      --navy-2: #04328f;
+      --green: #229c4a;
+      --green-dark: #177637;
+      --green-soft: #eaf7ee;
+      --gold: #f7c948;
+      --ink: #14213d;
+      --muted: #657083;
+      --line: #dfe8e3;
+      --paper: #ffffff;
+      --bg: #f6faf8;
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow-sm: 0 10px 30px rgba(0, 31, 107, 0.08);
+      --shadow-md: 0 18px 55px rgba(0, 31, 107, 0.13);
+      --shadow-green: 0 18px 45px rgba(34, 156, 74, 0.18);
+      --container: 1140px;
+      --ease: 220ms ease;
+    }
 
-        /* === NAVBAR === */
-        nav {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #003d99 100%);
-            color: white;
-            padding: 0.8rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        nav h1 {
-            font-size: 1.4rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            letter-spacing: -0.5px;
-        }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
 
-        nav h1 span {
-            color: var(--primary-green);
-            font-weight: 800;
-        }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(34, 156, 74, 0.11), transparent 34rem),
+        linear-gradient(180deg, #f8fcfa 0%, #eef7f2 100%);
+      color: var(--ink);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
 
-        nav .logo {
-            height: 150px;
-            width: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
-            transition: var(--transition);
-        }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        nav .logo:hover {
-            transform: scale(1.12);
-            filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
-        }
+    a {
+      color: inherit;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 35px;
-        }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0, 31, 107, 0.08);
+      box-shadow: 0 6px 22px rgba(0, 31, 107, 0.06);
+    }
 
-        nav ul li a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
-            transition: var(--transition);
-            letter-spacing: 0.3px;
-        }
+    .nav-wrap {
+      width: min(92%, var(--container));
+      margin: 0 auto;
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
 
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2.5px;
-            background: var(--primary-green);
-            transition: var(--transition);
-        }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      min-width: max-content;
+    }
 
-        nav ul li a:hover {
-            color: var(--primary-green);
-        }
+    .brand-logo {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 16px rgba(0, 31, 107, 0.14));
+    }
 
-        nav ul li a:hover::after {
-            width: 100%;
-        }
+    .brand-text strong {
+      display: block;
+      font-family: "Poppins", sans-serif;
+      color: var(--navy);
+      font-size: 1.12rem;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
 
-        /* === HERO SECTION === */
-        .hero {
-            background: linear-gradient(135deg, rgba(0, 31, 107, 0.85) 0%, rgba(34, 156, 74, 0.85) 100%), 
-                        url('peresmian.jpg') center/cover;
-            color: white;
-            text-align: center;
-            padding: 160px 20px;
-            position: relative;
-            overflow: hidden;
-        }
+    .brand-text span {
+      display: block;
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 20% 50%, rgba(34, 156, 74, 0.15) 0%, transparent 50%);
-            pointer-events: none;
-        }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        .hero h2 {
-            font-size: 3.8rem;
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 20px;
-            font-weight: 800;
-            letter-spacing: -1.5px;
-            animation: slideDownFade 0.8s ease-out;
-            position: relative;
-            z-index: 1;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.94rem;
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: background var(--ease), color var(--ease), transform var(--ease);
+    }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
-            line-height: 1.9;
-            animation: slideUpFade 0.8s ease-out 0.2s both;
-            position: relative;
-            z-index: 1;
-        }
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      background: var(--green-soft);
+      color: var(--green-dark);
+      transform: translateY(-1px);
+      outline: none;
+    }
 
-        @keyframes slideDownFade {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .nav-cta {
+      background: var(--green) !important;
+      color: white !important;
+      box-shadow: 0 10px 24px rgba(34, 156, 74, 0.2);
+    }
 
-        @keyframes slideUpFade {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .nav-cta:hover,
+    .nav-cta:focus-visible {
+      background: var(--green-dark) !important;
+    }
 
-        /* === CONTAINER === */
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 80px auto;
-            background: var(--white);
-            padding: 70px 60px;
-            border-radius: 24px;
-            box-shadow: 0 12px 48px rgba(0, 31, 107, 0.08);
-            position: relative;
-            animation: fadeInUp 0.8s ease-out;
-        }
+    .hero {
+      position: relative;
+      min-height: 690px;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(135deg, rgba(0, 31, 107, 0.9), rgba(0, 31, 107, 0.62) 45%, rgba(34, 156, 74, 0.76)),
+        url("peresmian.jpg") center/cover no-repeat;
+    }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 22% 25%, rgba(247, 201, 72, 0.2), transparent 26rem),
+        radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.12), transparent 19rem);
+      z-index: -1;
+    }
 
-        h3 {
-            color: var(--primary-dark);
-            margin-bottom: 40px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.4rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            position: relative;
-            display: inline-block;
-        }
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 110px;
+      background: linear-gradient(to bottom, transparent, var(--bg));
+      z-index: -1;
+    }
 
-        h3::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 80px;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary-green) 0%, rgba(34, 156, 74, 0.3) 100%);
-            border-radius: 3px;
-        }
+    .hero-inner {
+      width: min(92%, var(--container));
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(290px, 0.85fr);
+      align-items: center;
+      gap: 48px;
+      padding: 80px 0 120px;
+    }
 
-        .container p {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            line-height: 1.9;
-        }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
 
-        /* === PROGRAM GRID === */
-        .program-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 45px;
-        }
+    .eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(247, 201, 72, 0.16);
+    }
 
-        .program-card {
-            background: linear-gradient(135deg, var(--accent-light) 0%, #F5F5F5 100%);
-            padding: 40px;
-            border-radius: 18px;
-            border-left: 6px solid var(--primary-green);
-            box-shadow: 0 4px 16px rgba(34, 156, 74, 0.08);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
+    .hero h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(2.55rem, 6vw, 5.7rem);
+      line-height: 1.02;
+      letter-spacing: -0.065em;
+      max-width: 840px;
+      margin-bottom: 24px;
+    }
 
-        .program-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: radial-gradient(circle, rgba(34, 156, 74, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
+    .hero h1 span {
+      color: #bff0cc;
+    }
 
-        .program-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 16px 40px rgba(34, 156, 74, 0.15);
-            background: linear-gradient(135deg, #E8F5E9 0%, #FFFFFF 100%);
-            border-left-color: #1a7d3a;
-        }
+    .hero-copy {
+      max-width: 720px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: clamp(1rem, 2vw, 1.24rem);
+      margin-bottom: 32px;
+    }
 
-        .program-card h4 {
-            color: var(--primary-green);
-            margin-bottom: 15px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            position: relative;
-            z-index: 1;
-        }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
 
-        .program-card p {
-            color: var(--text-light);
-            position: relative;
-            z-index: 1;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 999px;
+      padding: 14px 22px;
+      min-height: 52px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform var(--ease), box-shadow var(--ease), background var(--ease), border-color var(--ease);
+    }
 
-        /* === LOGO GRID === */
-        .logo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-            align-items: center;
-            justify-items: center;
-        }
+    .btn-primary {
+      background: var(--green);
+      color: white;
+      box-shadow: var(--shadow-green);
+    }
 
-        .logo-item {
-            text-align: center;
-            transition: var(--transition);
-            padding: 25px 20px;
-            border-radius: 14px;
-            background: var(--bg-light);
-            cursor: pointer;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-        }
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      outline: none;
+    }
 
-        .logo-item:hover {
-            background: var(--accent-light);
-            transform: translateY(-10px);
-            box-shadow: 0 12px 28px rgba(34, 156, 74, 0.12);
-        }
+    .btn-ghost {
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.09);
+    }
 
-        .logo-item img {
-            max-width: 130px;
-            height: auto;
-            transition: var(--transition);
-            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
-        }
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-2px);
+      outline: none;
+    }
 
-        .logo-item:hover img {
-            transform: scale(1.18);
-            filter: drop-shadow(0 8px 24px rgba(34, 156, 74, 0.2));
-        }
+    .hero-panel {
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius-xl);
+      padding: 26px;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.2);
+    }
 
-        .logo-item p {
-            margin-top: 15px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            letter-spacing: 0.3px;
-        }
+    .hero-panel h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.42rem;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
 
-        /* === FOOTER === */
-        footer {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #003d99 100%);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            margin-top: 80px;
-            box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
+    .hero-panel p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.98rem;
+      margin-bottom: 20px;
+    }
 
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(34, 156, 74, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
+    .impact-list {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+    }
 
-        footer h3 {
-            color: var(--primary-green);
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            position: relative;
-            z-index: 1;
-        }
+    .impact-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.12);
+    }
 
-        footer p {
-            color: rgba(255, 255, 255, 0.85);
-            margin: 8px 0;
-            line-height: 1.8;
-            position: relative;
-            z-index: 1;
-        }
+    .impact-list b {
+      display: block;
+      line-height: 1.3;
+    }
 
-        footer a {
-            position: relative;
-            z-index: 1;
-            display: inline-block;
-        }
+    .impact-list small {
+      display: block;
+      color: rgba(255, 255, 255, 0.76);
+      line-height: 1.55;
+      margin-top: 2px;
+    }
 
-        /* === FOOTER LINKS === */
-        .footer-links {
-            margin-top: 40px;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
+    .section {
+      width: min(92%, var(--container));
+      margin: 0 auto 72px;
+    }
 
-        .footer-links a {
-            color: var(--primary-green);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 13px 32px;
-            border: 2.5px solid var(--primary-green);
-            border-radius: 10px;
-            transition: var(--transition);
-            background: transparent;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 2px 8px rgba(34, 156, 74, 0.15);
-        }
+    .section-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(0, 31, 107, 0.08);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+      padding: clamp(28px, 5vw, 58px);
+    }
 
-        .footer-links a:hover {
-            background: var(--primary-green);
-            color: white;
-            box-shadow: 0 12px 28px rgba(34, 156, 74, 0.4);
-            transform: translateY(-4px);
-        }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(260px, 0.55fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
 
-        /* === RESPONSIVE === */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 20px;
-                padding: 1rem 3%;
-            }
+    .kicker {
+      color: var(--green);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-size: 0.82rem;
+      margin-bottom: 10px;
+    }
 
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+    .section h2 {
+      font-family: "Poppins", sans-serif;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+    }
 
-            .hero h2 {
-                font-size: 2.2rem;
-            }
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
 
-            .hero p {
-                font-size: 1rem;
-            }
+    .highlight {
+      color: var(--green-dark);
+      font-weight: 900;
+    }
 
-            .container {
-                padding: 35px 25px;
-                margin: 50px auto;
-            }
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 28px;
+      align-items: stretch;
+    }
 
-            h3 {
-                font-size: 1.8rem;
-            }
+    .about-text {
+      display: grid;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
 
-            .program-grid {
-                grid-template-columns: 1fr;
-            }
+    .fact-box {
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: white;
+      position: relative;
+      overflow: hidden;
+      min-height: 100%;
+    }
 
-            .logo-grid {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-                gap: 25px;
-            }
+    .fact-box::after {
+      content: "";
+      position: absolute;
+      right: -55px;
+      top: -55px;
+      width: 170px;
+      height: 170px;
+      border-radius: 999px;
+      background: rgba(34, 156, 74, 0.32);
+    }
 
-            .logo-item img {
-                max-width: 100px;
-            }
-        }
+    .fact-box h3 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
 
-        @media (max-width: 480px) {
-            nav h1 {
-                font-size: 1.2rem;
-            }
+    .fact-row {
+      position: relative;
+      z-index: 1;
+      padding: 14px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
 
-            .hero {
-                padding: 80px 15px;
-            }
+    .fact-row span {
+      display: block;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.82rem;
+      margin-bottom: 2px;
+    }
 
-            .hero h2 {
-                font-size: 1.8rem;
-            }
+    .fact-row b {
+      font-size: 0.98rem;
+    }
 
-            .hero p {
-                font-size: 0.95rem;
-            }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
 
-            .container {
-                width: 95%;
-                padding: 25px 20px;
-            }
+    .stat {
+      border-radius: var(--radius-lg);
+      padding: 24px 18px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 22px rgba(20, 33, 61, 0.04);
+    }
 
-            nav ul {
-                gap: 10px;
-            }
+    .stat strong {
+      display: block;
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.45rem);
+      line-height: 1;
+      color: var(--green);
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+    }
 
-            nav ul li a {
-                font-size: 0.85rem;
-            }
-        }
+    .stat span {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
 
-        /* === SCROLLBAR STYLING === */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+    .partners {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
 
-        ::-webkit-scrollbar-track {
-            background: var(--bg-light);
-        }
+    .partner-card {
+      min-height: 200px;
+      padding: 32px 24px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--paper) 0%, rgba(34, 156, 74, 0.04) 100%);
+      border: 1.5px solid rgba(34, 156, 74, 0.16);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease), background var(--ease);
+      position: relative;
+      overflow: hidden;
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-green);
-            border-radius: 5px;
-        }
+    .partner-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(34, 156, 74, 0.08) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity var(--ease);
+      pointer-events: none;
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-dark);
-        }
-    </style>
+    .partner-card:hover,
+    .partner-card:focus-within {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 50px rgba(34, 156, 74, 0.22);
+      border-color: rgba(34, 156, 74, 0.48);
+      background: linear-gradient(135deg, #ffffff 0%, rgba(34, 156, 74, 0.08) 100%);
+    }
+
+    .partner-card:hover::before {
+      opacity: 1;
+    }
+
+    .partner-card img {
+      width: 110px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 18px;
+      filter: saturate(1.1) drop-shadow(0 6px 18px rgba(34, 156, 74, 0.12));
+      transition: transform var(--ease), filter var(--ease);
+      position: relative;
+      z-index: 1;
+    }
+
+    .partner-card:hover img {
+      transform: scale(1.12);
+      filter: saturate(1.25) drop-shadow(0 10px 28px rgba(34, 156, 74, 0.2));
+    }
+
+    .partner-card span {
+      color: var(--navy);
+      font-size: 0.9rem;
+      font-weight: 800;
+      line-height: 1.4;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .program-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: var(--radius-xl);
+      padding: 30px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(20, 33, 61, 0.05);
+      transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+    }
+
+    .program-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -38px -72px auto;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: var(--green-soft);
+      z-index: 0;
+      transition: transform var(--ease), background var(--ease);
+    }
+
+    .program-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(34, 156, 74, 0.28);
+    }
+
+    .program-card:hover::before {
+      transform: scale(1.15);
+      background: rgba(34, 156, 74, 0.16);
+    }
+
+    .program-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      font-size: 1.7rem;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .program-card h3 {
+      font-family: "Poppins", sans-serif;
+      color: var(--navy);
+      font-size: 1.28rem;
+      line-height: 1.32;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .program-card p {
+      color: var(--muted);
+      position: relative;
+      z-index: 1;
+    }
+
+    .program-tag {
+      margin-top: 22px;
+      width: fit-content;
+      border-radius: 999px;
+      background: rgba(0, 31, 107, 0.06);
+      color: var(--navy);
+      font-size: 0.82rem;
+      font-weight: 900;
+      padding: 7px 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-band {
+      width: min(92%, var(--container));
+      margin: 0 auto 76px;
+      border-radius: 32px;
+      padding: clamp(30px, 5vw, 56px);
+      background:
+        radial-gradient(circle at 12% 20%, rgba(247, 201, 72, 0.2), transparent 20rem),
+        linear-gradient(135deg, var(--navy), #022b7f 58%, var(--green-dark));
+      color: white;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta-band h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      line-height: 1.14;
+      letter-spacing: -0.045em;
+      margin-bottom: 12px;
+    }
+
+    .cta-band p {
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 780px;
+    }
+
+    .site-footer {
+      background: #06184a;
+      color: white;
+      padding: 62px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .site-footer::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(34, 156, 74, 0.18), transparent 25rem),
+        radial-gradient(circle at 90% 50%, rgba(247, 201, 72, 0.12), transparent 22rem);
+      pointer-events: none;
+    }
+
+    .footer-inner {
+      width: min(92%, var(--container));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .footer-brand {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand img {
+      width: 74px;
+      height: 74px;
+      object-fit: contain;
+      background: white;
+      border-radius: 18px;
+      padding: 8px;
+    }
+
+    .footer-brand h2 {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.2;
+      font-size: 1.5rem;
+    }
+
+    .footer-brand span {
+      color: #bff0cc;
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .footer-inner p {
+      color: rgba(255, 255, 255, 0.76);
+      max-width: 680px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 12px;
+      min-width: 220px;
+    }
+
+    .footer-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      transition: background var(--ease), transform var(--ease);
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      background: var(--green);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .copyright {
+      width: min(92%, var(--container));
+      margin: 38px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.6);
+      position: relative;
+      z-index: 1;
+      font-size: 0.92rem;
+    }
+
+    .reveal {
+      animation: fadeUp 700ms ease both;
+    }
+
+    .reveal:nth-child(2) { animation-delay: 80ms; }
+    .reveal:nth-child(3) { animation-delay: 160ms; }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner,
+      .section-head,
+      .about-grid,
+      .cta-band,
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding: 72px 0 96px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .partners {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .program-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .program-card {
+        min-height: 270px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-wrap {
+        min-height: auto;
+        padding: 12px 0;
+        align-items: flex-start;
+      }
+
+      .brand-logo {
+        width: 58px;
+        height: 58px;
+      }
+
+      .brand-text strong {
+        font-size: 0.98rem;
+      }
+
+      .brand-text span {
+        font-size: 0.72rem;
+      }
+
+      .nav-links {
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 6px;
+        justify-content: end;
+      }
+
+      .nav-links a {
+        padding: 8px 10px;
+        font-size: 0.82rem;
+      }
+
+      .hero-copy,
+      .lead,
+      .about-text {
+        font-size: 1rem;
+      }
+
+      .hero-panel,
+      .section-card,
+      .program-card,
+      .cta-band {
+        border-radius: 22px;
+      }
+
+      .partners {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .partner-card {
+        min-height: 180px;
+        padding: 26px 20px;
+      }
+
+      .partner-card img {
+        width: 100px;
+        height: 72px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav-wrap {
+        width: 94%;
+        gap: 12px;
+      }
+
+      .brand-text {
+        display: none;
+      }
+
+      .nav-links {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+      }
+
+      .nav-links a {
+        text-align: center;
+      }
+
+      .hero-inner {
+        width: 90%;
+        padding: 54px 0 82px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .stats,
+      .partners {
+        grid-template-columns: 1fr;
+      }
+
+      .partner-card {
+        min-height: 160px;
+        padding: 24px 18px;
+      }
+
+      .partner-card img {
+        width: 90px;
+        height: 64px;
+        margin-bottom: 12px;
+      }
+
+      .footer-links {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header class="site-header" aria-label="Navigasi utama">
+    <div class="nav-wrap">
+      <a href="#beranda" class="brand" aria-label="Beranda KAMZA">
+        <img src="logo-kampung-zakat.png" alt="Logo KAMZA" class="brand-logo" />
+        <span class="brand-text">
+          <strong>KAMZA</strong>
+          <span>Kampung Zakat Terpadu</span>
+        </span>
+      </a>
 
-    <nav>
-        <h1>
-            <img src="logo-kampung-zakat.png" alt="Logo KAMZA" class="logo">
-        </h1>
-        <ul>
-            <li><a href="#profil">Profil</a></li>
-            <li><a href="#sinergi">Lembaga Sinergi</a></li>
-            <li><a href="#program">Program Utama</a></li>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#sinergi">Sinergi</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a class="nav-cta" href="https://api.whatsapp.com/send?phone=6281336661466" target="_blank" rel="noopener">Hubungi</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <header class="hero">
-        <h2>Kampung Zakat Terpadu</h2>
-        <p>Dusun Paceh, Desa Jambearum, Kec. Sumberjambe, Kab. Jember<br><strong>Membangun Kemandirian Umat Melalui Zakat yang Tepat Sasaran dan Berkelanjutan</strong></p>
-    </header>
-
-    <section class="container" id="profil">
-        <h3>Tentang KAMZA</h3>
-        <p style="margin-bottom: 20px; margin-top: 40px;">
-            <strong style="color: var(--primary-green); font-size: 1.1rem;">Kampung Zakat Terpadu (KAMZA)</strong> adalah program binaan resmi dari Kantor Kementerian Agama (Kemenag) Kabupaten Jember yang didirikan pada tanggal 15 Maret 2018, dan diresmikan langsung oleh Kakanwil Kemenag Provinsi Jawa Timur pada 31 Maret 2018. 
-        </p>
-        <p style="margin-bottom: 0;">
-            Di bawah arahan dan pengelolaan Bapak Amiruddin, S.Pd. selaku Sekretaris Direktur/Direktur, KAMZA hadir sebagai solusi untuk meningkatkan kualitas ekonomi, pendidikan, dan kesehatan masyarakat di Dusun Paceh dan sekitarnya melalui pendayagunaan dana zakat, infaq, dan sedekah secara produktif dan kolaboratif.
-        </p>
-    </section>
-
-    <section class="container" id="sinergi">
-        <h3>Sinergi & Kolaborasi</h3>
-        <p style="text-align: center; margin-bottom: 30px; margin-top: 40px; color: var(--text-light);">Keberhasilan program KAMZA terwujud berkat dukungan luar biasa dari berbagai Unit Pengumpul Zakat (UPZ) dan Lembaga Amil Zakat (LAZ) berikut:</p>
-        
-        <div class="logo-grid">
-            <div class="logo-item">
-                <img src="logo-baznas.png" alt="BAZNAS Jember">
-                <p>BAZNAS Jember</p>
-            </div>
-
-            <div class="logo-item">
-                <img src="logo.lazis.nurul.falah.png" alt="Lazis Nurul Falah">
-                <p>Lazis Nurul Falah</p>
-            </div>
-            <div class="logo-item">
-                <img src="logo-lazis-nurul-hayat.png" alt="Lazis Nurul Hayat">
-                <p>Lazis Nurul Hayat</p>
-            </div>
-            <div class="logo-item">
-                <img src="logo-ym.png" alt="Yatim Mandiri">
-                <p>Yatim Mandiri</p>
-            </div>
-            <div class="logo-item">
-                <img src="https://via.placeholder.com/150/FFFFFF/000000?text=Lazis+Rizqi" alt="Lazis Rizqi">
-                <p>Lazis Rizqi</p>
-            </div>
-            <div class="logo-item">
-                <img src="logo-ydsf.png" alt="YDSF">
-                <p>YDSF</p>
-            </div>
+  <main id="beranda">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Binaan Kemenag Kab. Jember</p>
+          <h1 id="hero-title">Kampung Zakat Terpadu <span>Dusun Paceh</span></h1>
+          <p class="hero-copy">
+            Membangun kemandirian umat melalui zakat, infak, dan sedekah yang tepat sasaran, produktif, kolaboratif, dan berkelanjutan.
+          </p>
+          <div class="hero-actions" aria-label="Tautan utama">
+            <a class="btn btn-primary" href="#program">Lihat Program</a>
+            <a class="btn btn-ghost" href="https://maps.app.goo.gl/zhAtB4PnGNdUTpLe9" target="_blank" rel="noopener">📍 Buka Lokasi</a>
+          </div>
         </div>
+
+        <aside class="hero-panel reveal" aria-label="Ringkasan dampak KAMZA">
+          <h2>Zakat yang dikelola untuk dampak nyata.</h2>
+          <p>Fokus pada penguatan pendidikan, ekonomi keluarga, kesehatan, dan kepedulian sosial masyarakat.</p>
+          <ul class="impact-list">
+            <li>
+              <span aria-hidden="true">📚</span>
+              <div><b>Pendidikan Qurani</b><small>TPA, Rumah Baca Qur’an, beasiswa, dan dukungan guru ngaji.</small></div>
+            </li>
+            <li>
+              <span aria-hidden="true">💼</span>
+              <div><b>Ekonomi Produktif</b><small>Pelatihan, modal usaha, serta bantuan ternak untuk keluarga binaan.</small></div>
+            </li>
+            <li>
+              <span aria-hidden="true">🤝</span>
+              <div><b>Kolaborasi LAZ & UPZ</b><small>Sinergi lembaga zakat untuk program yang lebih luas dan berkelanjutan.</small></div>
+            </li>
+          </ul>
+        </aside>
+      </div>
     </section>
 
-    <section class="container" id="program">
-        <h3>Program Unggulan</h3>
+    <section class="section section-card reveal" id="profil" aria-labelledby="profil-title">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Tentang KAMZA</p>
+          <h2 id="profil-title">Gerakan zakat terpadu untuk menguatkan warga Paceh.</h2>
+        </div>
+        <p class="lead">
+          KAMZA menjadi ruang kolaborasi antara pemerintah, lembaga zakat, tokoh masyarakat, dan warga untuk menghadirkan program yang menyentuh kebutuhan dasar sekaligus mendorong kemandirian.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            <span class="highlight">Kampung Zakat Terpadu (KAMZA)</span> adalah program binaan resmi dari Kantor Kementerian Agama Kabupaten Jember yang didirikan pada tanggal 15 Maret 2018 dan diresmikan langsung oleh Kakanwil Kemenag Provinsi Jawa Timur pada 31 Maret 2018.
+          </p>
+          <p>
+            Di bawah arahan dan pengelolaan Bapak Amiruddin, S.Pd. selaku Sekretaris Direktur/Direktur, KAMZA hadir sebagai solusi untuk meningkatkan kualitas ekonomi, pendidikan, dan kesehatan masyarakat di Dusun Paceh dan sekitarnya melalui pendayagunaan dana zakat, infak, dan sedekah secara produktif.
+          </p>
+        </div>
+
+        <aside class="fact-box" aria-label="Informasi singkat KAMZA">
+          <h3>Informasi Singkat</h3>
+          <div class="fact-row">
+            <span>Lokasi</span>
+            <b>Dusun Paceh, Desa Jambearum, Sumberjambe, Jember</b>
+          </div>
+          <div class="fact-row">
+            <span>Ditetapkan</span>
+            <b>15 Maret 2018</b>
+          </div>
+          <div class="fact-row">
+            <span>Diresmikan</span>
+            <b>31 Maret 2018</b>
+          </div>
+          <div class="fact-row">
+            <span>Fokus</span>
+            <b>Pendidikan, Ekonomi, Sosial, dan Kesehatan</b>
+          </div>
+        </aside>
+      </div>
+
+      <div class="stats" aria-label="Ringkasan program">
+        <div class="stat"><strong>4</strong><span>Bidang manfaat utama</span></div>
+        <div class="stat"><strong>6+</strong><span>Mitra zakat dan sosial</span></div>
+        <div class="stat"><strong>2018</strong><span>Tahun mulai gerakan</span></div>
+        <div class="stat"><strong>1</strong><span>Dusun binaan terpadu</span></div>
+      </div>
+    </section>
+
+    <section class="section section-card reveal" id="sinergi" aria-labelledby="sinergi-title">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Sinergi & Kolaborasi</p>
+          <h2 id="sinergi-title">Dikuatkan oleh jaringan lembaga zakat dan mitra sosial.</h2>
+        </div>
+        <p class="lead">
+          Keberhasilan KAMZA terbangun melalui gotong royong berbagai Unit Pengumpul Zakat dan Lembaga Amil Zakat yang bergerak bersama untuk kemaslahatan warga.
+        </p>
+      </div>
+
+      <div class="partners" aria-label="Daftar lembaga sinergi">
+        <article class="partner-card">
+          <img src="logo-baznas.png" alt="Logo BAZNAS Jember" />
+          <span>BAZNAS Jember</span>
+        </article>
+        <article class="partner-card">
+          <img src="logo.lazis.nurul.falah.png" alt="Logo Lazis Nurul Falah" />
+          <span>Lazis Nurul Falah</span>
+        </article>
+        <article class="partner-card">
+          <img src="logo-lazis-nurul-hayat.png" alt="Logo Lazis Nurul Hayat" />
+          <span>Lazis Nurul Hayat</span>
+        </article>
+        <article class="partner-card">
+          <img src="logo-ym.png" alt="Logo Yatim Mandiri" />
+          <span>Yatim Mandiri</span>
+        </article>
+        <article class="partner-card">
+          <img src="https://via.placeholder.com/220x140/FFFFFF/177637?text=Lazis+Rizqi" alt="Logo Lazis Rizqi" />
+          <span>Lazis Rizqi</span>
+        </article>
+        <article class="partner-card">
+          <img src="logo-ydsf.png" alt="Logo YDSF" />
+          <span>YDSF</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="program" aria-labelledby="program-title">
+      <div class="section-card">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Program Unggulan</p>
+            <h2 id="program-title">Tiga pilar utama untuk membangun kemandirian umat.</h2>
+          </div>
+          <p class="lead">
+            Setiap program dirancang agar bantuan tidak berhenti sebagai santunan, tetapi menjadi jalan menuju peningkatan kualitas hidup keluarga penerima manfaat.
+          </p>
+        </div>
+
         <div class="program-grid">
-            <div class="program-card">
-                <h4>📚 Pendidikan & Keagamaan</h4>
-                <p>Pengentasan buta aksara Al-Qur'an melalui TPA Darul Qur'an Ibrahimy, Rumah Baca Qur'an (RBQ) untuk lansia, serta pemberian beasiswa bagi anak yatim dan bantuan guru ngaji.</p>
+          <article class="program-card">
+            <div>
+              <div class="program-icon" aria-hidden="true">📚</div>
+              <h3>Pendidikan & Keagamaan</h3>
+              <p>Pengentasan buta aksara Al-Qur’an melalui TPA Darul Qur’an Ibrahimy, Rumah Baca Qur’an untuk lansia, beasiswa anak yatim, dan bantuan guru ngaji.</p>
             </div>
-            <div class="program-card">
-                <h4>💼 Pemberdayaan Ekonomi</h4>
-                <p>Pelatihan kemandirian seperti pembuatan paving dan kerajinan anyaman bambu. Bantuan berupa modal usaha dan hewan ternak (kambing) untuk meningkatkan taraf hidup warga.</p>
+            <span class="program-tag">Literasi Qurani</span>
+          </article>
+
+          <article class="program-card">
+            <div>
+              <div class="program-icon" aria-hidden="true">💼</div>
+              <h3>Pemberdayaan Ekonomi</h3>
+              <p>Pelatihan kemandirian seperti pembuatan paving dan anyaman bambu, bantuan modal usaha, serta hewan ternak untuk meningkatkan taraf hidup warga.</p>
             </div>
-            <div class="program-card">
-                <h4>🏥 Sosial & Kesehatan</h4>
-                <p>Program bedah rumah/ruko tidak layak huni, santunan rutin janda dan duafa (SAJADA), pembagian paket sembako, sunatan massal, penyediaan air bersih, hingga pengobatan gratis.</p>
+            <span class="program-tag">Ekonomi Produktif</span>
+          </article>
+
+          <article class="program-card">
+            <div>
+              <div class="program-icon" aria-hidden="true">🏥</div>
+              <h3>Sosial & Kesehatan</h3>
+              <p>Bedah rumah/ruko tidak layak huni, santunan janda dan duafa, paket sembako, sunatan massal, air bersih, hingga pengobatan gratis.</p>
             </div>
+            <span class="program-tag">Layanan Warga</span>
+          </article>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <h3>KAMZA - Kampung Zakat Terpadu</h3>
-        <p>Dusun Paceh, Desa Jambearum, Kec. Sumberjambe, Kab. Jember, Jawa Timur</p>
-        
-        <div class="footer-links">
-            <a href="https://maps.app.goo.gl/zhAtB4PnGNdUTpLe9" target="_blank">📍 Lokasi</a>
-            <a href="https://www.instagram.com/kampung.zakat" target="_blank">📸 Instagram</a>
-            <a href="https://api.whatsapp.com/send?phone=6281336661466" target="_blank">💬 WhatsApp</a>
-        </div>
-        
-        <p style="margin-top: 20px; color: rgba(255,255,255,0.7); position: relative; z-index: 1;"><small>&copy; 2026 KAMZA Dusun Paceh. Binaan Kemenag Kab. Jember. Semua Hak Dilindungi.</small></p>
-    </footer>
+    <section class="cta-band reveal" aria-labelledby="cta-title">
+      <div>
+        <h2 id="cta-title">Mari bersinergi membangun Dusun Paceh yang lebih mandiri.</h2>
+        <p>Hubungi pengelola KAMZA untuk informasi program, kunjungan lokasi, atau peluang kolaborasi bersama lembaga zakat dan mitra sosial.</p>
+      </div>
+      <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=6281336661466" target="_blank" rel="noopener">💬 Hubungi WhatsApp</a>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="logo-kampung-zakat.png" alt="Logo KAMZA" />
+          <div>
+            <h2>KAMZA</h2>
+            <span>Kampung Zakat Terpadu Dusun Paceh</span>
+          </div>
+        </div>
+        <p>Dusun Paceh, Desa Jambearum, Kecamatan Sumberjambe, Kabupaten Jember, Jawa Timur. Binaan Kantor Kementerian Agama Kabupaten Jember.</p>
+      </div>
+
+      <div class="footer-links" aria-label="Tautan kontak">
+        <a href="https://maps.app.goo.gl/zhAtB4PnGNdUTpLe9" target="_blank" rel="noopener">📍 Lokasi</a>
+        <a href="https://www.instagram.com/kampung.zakat" target="_blank" rel="noopener">📸 Instagram</a>
+        <a href="https://api.whatsapp.com/send?phone=6281336661466" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+
+    <p class="copyright">&copy; 2026 KAMZA Dusun Paceh. Semua Hak Dilindungi.</p>
+  </footer>
 </body>
 </html>
